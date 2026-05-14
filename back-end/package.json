@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "tsx watch --env-file=.env src/server.ts",
     "start": "node dist/server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "db:generate": "npx drizzle-kit generate",
+    "db:migrage": "npx drizzle-kit migrate",
+    "db:push": "npx drizzle-kit push"
   },
   "keywords": [],
   "author": "",
