@@ -10,10 +10,16 @@
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "moduleResolution": "node16"
+    "moduleResolution": "nodenext",
+
+    "outDir": "./dist",
+    "rootDir": "./src",
+
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   },
 
-  "paths": {
-    "@/*": ["./src/*"]
-  }
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
 }
