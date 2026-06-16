@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1745276400000,
+      "tag": "0000_purple_titania",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1745276500000,
+      "tag": "0001_shocking_mikhail_rasputin",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1748649600000,
+      "tag": "0002_medbrain_full_schema",
+      "breakpoints": true
+    }
+  ]
+}
