@@ -11,4 +11,8 @@ export class UsersService {
   async findAll() {
     return this.repository.findAll();
   }
+
+  async ensureUser(input: { id: string; name: string; email: string }) {
+    await this.repository.ensureUser(input);
+  }
 }

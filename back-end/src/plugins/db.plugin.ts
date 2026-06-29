@@ -13,7 +13,9 @@ declare module "fastify" {
 export const dbPlugin = fp(
   async (app) => {
     const pool = new Pool({ connectionString: process.env.DATABASE_URL });
-    const db = drizzle(pool);
+    // casing: "snake_case" alinha as chaves camelCase do schema (ex.: fileName)
+    // com as colunas snake_case geradas pelo drizzle-kit (drizzle.config.ts).
+    const db = drizzle(pool, { casing: "snake_case" });
 
     app.decorate("db", db);
 

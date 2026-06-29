@@ -13,4 +13,12 @@ export class UsersRepository {
   async findAll() {
     return this.db.select().from(users);
   }
+
+  /**
+   * Garante a existência de um usuário local (sincronizado do Supabase Auth).
+   * Idempotente — não sobrescreve se o id já existir.
+   */
+  async ensureUser(input: { id: string; name: string; email: string }) {
+    await this.db.insert(users).values(input).onConflictDoNothing();
+  }
 }

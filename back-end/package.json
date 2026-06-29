@@ -8,7 +8,7 @@
     "build": "tsc",
     "start": "node dist/server.js",
     "db:generate": "npx drizzle-kit generate",
-    "db:migrage": "npx drizzle-kit migrate",
+    "db:migrate": "npx drizzle-kit migrate",
     "db:push": "npx drizzle-kit push"
   },
   "keywords": [],
@@ -29,14 +29,20 @@
     "typescript-eslint": "^8.59.3"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.106.0",
     "@fastify/cors": "^11.2.0",
+    "@fastify/multipart": "^10.0.0",
     "@fastify/swagger": "^9.7.0",
     "@fastify/swagger-ui": "^5.2.6",
+    "@supabase/server": "^1.2.0",
+    "@supabase/supabase-js": "^2.108.2",
     "dotenv": "^17.4.2",
     "drizzle-orm": "^0.45.2",
     "fastify": "^5.8.5",
     "fastify-plugin": "^5.1.0",
     "fastify-type-provider-zod": "^6.1.0",
+    "jose": "^6.2.3",
+    "pdf-lib": "^1.17.1",
     "pg": "^8.20.0",
     "uuidv7": "^1.2.1",
     "zod": "^4.4.3"
